@@ -41,9 +41,11 @@ Functionality: AWS Lambda enables developers to write small, independent functio
 
 > # Three essential components of AWS Lambda: event objects, context objects, and environment variables. These components are crucial for effectively interacting with and adapting Lambda functions
  **Event Object:** When a Lambda function is triggered, it receives an event object that contains information about the source event, such as S3, DynamoDB, or API Gateway. The structure of this object varies depending on the source. For example, an S3 event object includes a records array with details about the event's source, AWS region, bucket name, and object key. Code snippets in Node.js and Python demonstrate how to access these values for tasks like processing uploaded files.
- 
+
  ![alt text](IMG/image.png)
 
- **Context Object:** This object provides metadata about the Lambda execution environment. It includes properties such as the AWS request ID for tracking, log group and stream names for locating logs in CloudWatch, the function name, memory limit, and a method to check the remaining execution time. This information helps manage function execution and allows for dynamic adjustments based on time constraints.
+ **Context Object:** This object provides metadata about the Lambda execution environment. It includes properties such as the **AWS request ID** for tracking, **log group** and stream names for locating logs in CloudWatch, the function name, memory limit, and a method to check the remaining execution time. This information helps manage function execution and allows for dynamic adjustments based on time constraints.
+
+ ![alt text](IMG/image1.png)
 
  **Environment Variables:** Environment variables allow configuration settings to be passed to Lambda functions without hardcoding values. This enhances the adaptability and portability of functions by referencing values like database connection strings or API keys. The use of IAM roles and KMS for security is also highlighted, with practical examples demonstrating how environment variables facilitate easier updates and environment-specific configurations.
